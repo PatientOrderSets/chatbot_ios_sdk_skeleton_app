@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import ChatBotSDK_v2
+import Think_research_messenger_SDK_Suhail
 
 
 
