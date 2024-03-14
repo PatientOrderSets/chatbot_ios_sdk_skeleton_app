@@ -43,9 +43,9 @@ workflows:
       email:
         recipients:
           - sts@architech.ca
-          # - mnaseem@architech.ca
-          # - jtenneti@architech.ca
-          # - babiraman@architech.ca
+          - mnaseem@architech.ca
+          - jtenneti@architech.ca
+          - babiraman@architech.ca
         notify:
           success: true
           failure: true
