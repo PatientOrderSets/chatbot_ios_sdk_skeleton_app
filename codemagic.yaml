@@ -42,9 +42,12 @@ workflows:
       email:
         recipients:
           - sts@architech.ca
+          # - mnaseem@architech.ca
+          # - jtenneti@architech.ca
+          # - babiraman@architech.ca
         notify:
           success: true
-          failure: false
+          failure: true
       app_store_connect:
         api_key: $APP_STORE_CONNECT_PRIVATE_KEY
         key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
