@@ -14,7 +14,7 @@ workflows:
         BUNDLE_ID: "com.thinkresearch.app"
         XCODE_WORKSPACE: "NativeSdkTest.xcworkspace"
         XCODE_SCHEME: "NativeSdkTest"
-        APP_STORE_APPLE_ID: 6479017566
+        APP_STORE_APPLE_ID: "6479017566"
       xcode: latest
       cocoapods: default
     scripts:
@@ -26,7 +26,8 @@ workflows:
       - name: Increment build number
         script: | 
           cd $CM_BUILD_DIR
-          LATEST_BUILD_NUMBER=$(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID")
+          LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number $APP_APPLE_ID)
+          echo "Updated version number $LATEST_BUILD_NUMBER"
           agvtool new-version -all $(($LATEST_BUILD_NUMBER + 1))
       - name: Build ipa for distribution
         script: | 
