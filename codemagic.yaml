@@ -41,7 +41,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - sts@architech@ca
+          - sts@architech.ca
         notify:
           success: true
           failure: false
