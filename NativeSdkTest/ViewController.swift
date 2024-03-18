@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Think_research_messenger_SDK_Suhail
+import Think_research_messenger_SDK_Release
 
 
 
@@ -22,13 +22,13 @@ class ViewController: UIViewController {
     )
     
     // novoscatia
-//    let configuration = ChatBotConfiguration(
-//        appId: "XnA6d2mEejaov78UETAzM5uj",
-//        baseUrl: "test.ca.one-stop-talk.sbx.gcp.trchq.com",
-//        originURL: "app-digitalfrontdoor-dev.apps.ext.novascotia.ca",
-//        lang:"en"
-//    )
-
+    //    let configuration = ChatBotConfiguration(
+    //        appId: "XnA6d2mEejaov78UETAzM5uj",
+    //        baseUrl: "test.ca.one-stop-talk.sbx.gcp.trchq.com",
+    //        originURL: "app-digitalfrontdoor-dev.apps.ext.novascotia.ca",
+    //        lang:"en"
+    //    )
+    
     
     var chatBotSdk:ChatBotSdk?
     
@@ -37,15 +37,16 @@ class ViewController: UIViewController {
         //        chatBotSdk = ChatBotSdk(configuration: configuration, viewController: self);
     }
     
-    @IBAction func btnClicked(_ sender: Any) {
+    @IBAction func btnClicked(_ sender:  UIButton) {
+        
+        sender.isUserInteractionEnabled = false
+        
         chatBotSdk = ChatBotSdk(configuration: configuration, viewController: self);
         chatBotSdk?.openBot()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            sender.isUserInteractionEnabled = true
+        }
     }
-    
-    
-    //
-    
-    
     
     
 }
