@@ -5,7 +5,7 @@ target 'NativeSdkTest' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   # pod 'Think_research_messenger_SDK_Release', :configurations => 'Release'
-  pod 'Think_research_messenger_SDK_Debug', :configurations => 'Debug'
+  pod 'Think_research_messenger_SDK_Debug','1.2.1', :configurations => 'Debug'
   # pod 'Think_research_messenger_SDK_Suhail'
 
   # pod 'Think_research_messenger_SDK_Debug_Suhail','1.0.11', :configurations => 'Debug'
