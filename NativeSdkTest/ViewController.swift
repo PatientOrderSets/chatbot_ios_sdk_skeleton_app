@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Think_research_messenger_SDK_Debug
+import Think_research_messenger_SDK_Release
 
 
 
