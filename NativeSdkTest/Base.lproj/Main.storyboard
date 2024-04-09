@@ -147,7 +147,6 @@
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="Oj7-GT-pG4"/>
                                                             <constraint firstAttribute="trailing" secondItem="H8L-wo-Fag" secondAttribute="trailing" constant="4" id="Shb-ev-oGD"/>
