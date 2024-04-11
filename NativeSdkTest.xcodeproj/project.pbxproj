@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DB631182BC457CD00A28C5F /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB631172BC457CD00A28C5F /* SettingsController.swift */; };
+		1D97543C2BC7AB1F009464EB /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97543B2BC7AB1F009464EB /* SettingsController.swift */; };
 		1DB6311A2BC4647B00A28C5F /* FloatingLabelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB631192BC4647A00A28C5F /* FloatingLabelInput.swift */; };
 		C26974542B7E2BF900E96B73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26974532B7E2BF900E96B73 /* AppDelegate.swift */; };
 		C26974562B7E2BF900E96B73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26974552B7E2BF900E96B73 /* SceneDelegate.swift */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		104CE1D38A16676AE93667BE /* Pods_NativeSdkTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NativeSdkTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DB631172BC457CD00A28C5F /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsController.swift; path = "../../Single Screen/Single Screen/SettingsController.swift"; sourceTree = "<group>"; };
+		1D97543B2BC7AB1F009464EB /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		1DB631192BC4647A00A28C5F /* FloatingLabelInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingLabelInput.swift; sourceTree = "<group>"; };
 		62711700171D30891B9A3320 /* Pods-NativeSdkTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeSdkTest.release.xcconfig"; path = "Target Support Files/Pods-NativeSdkTest/Pods-NativeSdkTest.release.xcconfig"; sourceTree = "<group>"; };
 		C26974502B7E2BF900E96B73 /* NativeSdkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeSdkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,11 +84,11 @@
 		C26974522B7E2BF900E96B73 /* NativeSdkTest */ = {
 			isa = PBXGroup;
 			children = (
+				1D97543B2BC7AB1F009464EB /* SettingsController.swift */,
 				C26974532B7E2BF900E96B73 /* AppDelegate.swift */,
 				1DB631192BC4647A00A28C5F /* FloatingLabelInput.swift */,
 				C26974552B7E2BF900E96B73 /* SceneDelegate.swift */,
 				C26974572B7E2BF900E96B73 /* ViewController.swift */,
-				1DB631172BC457CD00A28C5F /* SettingsController.swift */,
 				C26974592B7E2BF900E96B73 /* Main.storyboard */,
 				C269745C2B7E2BFB00E96B73 /* Assets.xcassets */,
 				C269745E2B7E2BFB00E96B73 /* LaunchScreen.storyboard */,
@@ -213,8 +213,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C26974582B7E2BF900E96B73 /* ViewController.swift in Sources */,
+				1D97543C2BC7AB1F009464EB /* SettingsController.swift in Sources */,
 				C26974542B7E2BF900E96B73 /* AppDelegate.swift in Sources */,
-				1DB631182BC457CD00A28C5F /* SettingsController.swift in Sources */,
 				C26974562B7E2BF900E96B73 /* SceneDelegate.swift in Sources */,
 				1DB6311A2BC4647B00A28C5F /* FloatingLabelInput.swift in Sources */,
 			);
