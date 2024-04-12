@@ -20,8 +20,7 @@ class ConfigurationCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        name.lineBreakMode = .byWordWrapping
-        name.numberOfLines=2
+       
 
         // Enable user interaction for the UIImageView
         deleteIcon.isUserInteractionEnabled = true

@@ -50,6 +50,8 @@ class SettingsController: UIViewController {
         
         tableView.delegate=self
         tableView.dataSource=self
+        tableView.rowHeight = 84
+
         
         self.hideKeyboardOnTapAround()
         refreshConfiguration()
@@ -102,7 +104,10 @@ extension SettingsController: UITableViewDataSource{
         
         let config = configurations[indexPath.row]
         // Configure cell with configuration data
-        cell.name.text = "AppID: \(config.appID), Origin: \(config.origin), BaseURL: \(config.baseURL), Language: \(config.language)"
+        
+        cell.name.lineBreakMode = .byTruncatingTail
+        cell.name.numberOfLines=2
+        cell.name.text = "\(config.appID)\n\(config.baseURL)"
         cell.defaultButton.setOn(config.isDefault, animated: true)
         
         // Set indexPath for the cell
