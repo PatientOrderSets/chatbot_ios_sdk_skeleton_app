@@ -22,7 +22,7 @@ class SettingsController: UIViewController {
     let valuePicker: UIPickerView! = UIPickerView()
     @IBOutlet weak var languageTextField: UITextField!
     
-    let gradePickerValues = ["Other", "Staging", "Production"]
+    let gradePickerValues = ["Other", "Production"]
     let languagePickerValues = ["en", "fr"]
     var activeTextField:UITextField?
     var languageValue = ""
@@ -165,20 +165,21 @@ extension SettingsController :UIPickerViewDataSource,UIPickerViewDelegate,UIText
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if activeTextField == environmentTextField {
             environmentTextField.text = gradePickerValues[row]
+//            if row == 1{
+//                
+//                
+//                
+//                appIDTextField.text = "yB9BJmrcH3bM4CShtMKB5qrw"
+//                appIDTextField.isUserInteractionEnabled = false
+//                originTextField.text = "test.ca.digital-front-door.stg.gcp.trchq.com"
+//                originTextField.isUserInteractionEnabled = false
+//                baseUrlTextField.text = "test.ca.digital-front-door.stg.gcp.trchq.com"
+//                baseUrlTextField.isUserInteractionEnabled = false
+//                languageTextField.text = languagePickerValues[0]
+//                
+//                
+//            }else 
             if row == 1{
-                
-                
-                
-                appIDTextField.text = "yB9BJmrcH3bM4CShtMKB5qrw"
-                appIDTextField.isUserInteractionEnabled = false
-                originTextField.text = "test.ca.digital-front-door.stg.gcp.trchq.com"
-                originTextField.isUserInteractionEnabled = false
-                baseUrlTextField.text = "test.ca.digital-front-door.stg.gcp.trchq.com"
-                baseUrlTextField.isUserInteractionEnabled = false
-                languageTextField.text = languagePickerValues[0]
-                
-                
-            }else if row == 2{
                 
                 
                 
