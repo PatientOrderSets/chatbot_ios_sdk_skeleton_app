@@ -45,6 +45,17 @@ class ViewController: UIViewController {
         
         sender.isUserInteractionEnabled = false
         
+        let defConfig=ConfigurationManager.shared.getDefaultConfiguration();
+        
+        
+        configuration = ChatBotConfiguration(
+            appId: defConfig!.appID,
+            baseUrl: defConfig!.baseURL,
+            originURL: defConfig!.origin,
+            lang:defConfig!.language
+        )
+        
+        
         chatBotSdk = ChatBotSdk(configuration: configuration, viewController: self);
         chatBotSdk?.openBot()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

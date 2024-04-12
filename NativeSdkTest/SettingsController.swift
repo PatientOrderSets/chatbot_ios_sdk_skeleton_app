@@ -17,6 +17,8 @@ class SettingsController: UIViewController {
     @IBOutlet weak var appIDTextField: FloatingLabelInput!
     @IBOutlet weak var baseUrlTextField: FloatingLabelInput!
     @IBOutlet weak var originTextField: FloatingLabelInput!
+    @IBOutlet weak var tableView: UITableView!
+    
     let valuePicker: UIPickerView! = UIPickerView()
     @IBOutlet weak var languageTextField: UITextField!
     
@@ -28,6 +30,10 @@ class SettingsController: UIViewController {
     var baseURL = ""
     var appIID = ""
     var language = ""
+    
+    var configurations: [Configuration] = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -41,7 +47,16 @@ class SettingsController: UIViewController {
         languageTextField.inputView = valuePicker
         environmentTextField.delegate = self
         languageTextField.delegate = self
+        
+        tableView.delegate=self
+        tableView.dataSource=self
+        
         self.hideKeyboardOnTapAround()
+        refreshConfiguration()
+        
+    }
+    func refreshConfiguration(){
+        configurations = ConfigurationManager.shared.getConfigurations()
     }
     var onValueUpdate: ((_ originValue: String, _ baseURL: String, _ appIID: String, _ language: String)-> Void)?
     
@@ -59,22 +74,64 @@ class SettingsController: UIViewController {
             if let viewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController {
                 
                 onValueUpdate?(originValue,baseURL,appIID,language)
-                // Navigate back to the FirstViewController
-                self.navigationController?.popViewController(animated: true)
+                
+                let csomd = Configuration(appID: appIID, origin: originValue, baseURL: baseURL, language: language, isDefault: false)
+                ConfigurationManager.shared.saveConfiguration(config: csomd)
+                
+                configurations.append(csomd)
+                tableView.reloadData()
+                
             }
         }
         
-        //        if let savedViewController = self.storyboard?.instantiateViewController(withIdentifier: "SavedDataViewController") as? SavedDataViewController{
-        //            savedViewController.baseURL = self.baseURL
-        //            savedViewController.appIID = self.appIID
-        //            savedViewController.environmentValue = self.environmentValue
-        //            savedViewController.languageValue = self.languageValue
-        //            savedViewController.originValue = self.originValue
-        //            self.navigationController?.pushViewController(savedViewController, animated: true)
-        //        }
+        
     }
     
 }
+extension SettingsController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You taped index path")
+    }
+}
+extension SettingsController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return configurations.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell=tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ConfigurationCell
+        
+        let config = configurations[indexPath.row]
+        // Configure cell with configuration data
+        cell.name.text = "AppID: \(config.appID), Origin: \(config.origin), BaseURL: \(config.baseURL), Language: \(config.language)"
+        cell.defaultButton.setOn(config.isDefault, animated: true)
+        
+        // Set indexPath for the cell
+        cell.indexPath = indexPath
+        // Set delegate to handle actions
+        cell.delegate = self
+        
+        
+        return cell
+    }
+}
+
+extension SettingsController: ConfigurationTableViewCellDelegate {
+    func didSelectDefaultConfiguration(at indexPath: IndexPath) {
+        
+        ConfigurationManager.shared.setDefaultConfiguration(at: indexPath.row)
+        self.refreshConfiguration()
+        tableView.reloadData()
+    }
+    
+    func didTapDeleteConfiguration(at indexPath: IndexPath) {
+        
+        
+        configurations.remove(at: indexPath.row)
+        ConfigurationManager.shared.deleteConfiguration(at: indexPath.row)
+        tableView.reloadData()
+    }
+}
+
 
 extension SettingsController :UIPickerViewDataSource,UIPickerViewDelegate,UITextFieldDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -127,7 +184,7 @@ extension SettingsController :UIPickerViewDataSource,UIPickerViewDelegate,UIText
                 baseUrlTextField.text = "test.ca.one-stop-talk.sbx.gcp.trchq.com"
                 baseUrlTextField.isUserInteractionEnabled = false
                 languageTextField.text = languagePickerValues[0]
- 
+                
                 
             }
             
