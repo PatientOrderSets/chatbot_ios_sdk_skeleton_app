@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import Think_research_messenger_SDK_Release
-
+import Think_research_messenger_SDK_Debug
+ 
 
 
 
@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     var configuration = ChatBotConfiguration(
         appId: "yB9BJmrcH3bM4CShtMKB5qrw",
         baseUrl: "test.ca.digital-front-door.stg.gcp.trchq.com",
-        originURL: "test.ca.digital-front-door.stg.gcp.trchq.com",
         lang:"en"
     )
     
@@ -51,7 +50,6 @@ class ViewController: UIViewController {
         configuration = ChatBotConfiguration(
             appId: defConfig!.appID,
             baseUrl: defConfig!.baseURL,
-            originURL: defConfig!.origin,
             lang:defConfig!.language
         )
         
@@ -85,8 +83,7 @@ class ViewController: UIViewController {
                 
                 self.configuration = ChatBotConfiguration(
                     appId: appId,
-                    baseUrl: baseUrl,
-                    originURL: originValue,
+                    baseUrl: baseUrl, 
                     lang:language
                 )
                 
