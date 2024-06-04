@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Think_research_messenger_SDK_Debug
+import Think_research_messenger_SDK_Release
  
 
 
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
                 
                 self.configuration = ChatBotConfiguration(
                     appId: appId,
-                    baseUrl: baseUrl, 
+                    baseUrl: baseUrl,
                     lang:language
                 )
                 
