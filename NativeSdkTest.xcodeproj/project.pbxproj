@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D2834A32C12D7AF00B20079 /* thinkresearch_messenger_ios_swift_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1D2834A22C12D7AF00B20079 /* thinkresearch_messenger_ios_swift_sdk */; };
+		1D2834A52C12DB6600B20079 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D2834A42C12DB6600B20079 /* PrivacyInfo.xcprivacy */; };
 		1D97543C2BC7AB1F009464EB /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97543B2BC7AB1F009464EB /* SettingsController.swift */; };
 		1DA47BA62BC98A7B0018A8E3 /* DBWraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47BA52BC98A7B0018A8E3 /* DBWraper.swift */; };
 		1DA47BA82BC998A20018A8E3 /* ConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47BA72BC998A20018A8E3 /* ConfigurationCell.swift */; };
@@ -22,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		104CE1D38A16676AE93667BE /* Pods_NativeSdkTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NativeSdkTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D2834A42C12DB6600B20079 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		1D97543B2BC7AB1F009464EB /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		1DA47BA52BC98A7B0018A8E3 /* DBWraper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBWraper.swift; sourceTree = "<group>"; };
 		1DA47BA72BC998A20018A8E3 /* ConfigurationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationCell.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB3087395D90752D5E7CE28 /* Pods_NativeSdkTest.framework in Frameworks */,
+				1D2834A32C12D7AF00B20079 /* thinkresearch_messenger_ios_swift_sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +75,7 @@
 		C26974472B7E2BF800E96B73 = {
 			isa = PBXGroup;
 			children = (
+				1D2834A42C12DB6600B20079 /* PrivacyInfo.xcprivacy */,
 				C26974522B7E2BF900E96B73 /* NativeSdkTest */,
 				C26974512B7E2BF900E96B73 /* Products */,
 				37AFBC26C736FAF8FE902D19 /* Pods */,
@@ -116,13 +121,15 @@
 				C269744C2B7E2BF900E96B73 /* Sources */,
 				C269744D2B7E2BF900E96B73 /* Frameworks */,
 				C269744E2B7E2BF900E96B73 /* Resources */,
-				E39E7EF560754E09C152AB8B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = NativeSdkTest;
+			packageProductDependencies = (
+				1D2834A22C12D7AF00B20079 /* thinkresearch_messenger_ios_swift_sdk */,
+			);
 			productName = NativeSdkTest;
 			productReference = C26974502B7E2BF900E96B73 /* NativeSdkTest.app */;
 			productType = "com.apple.product-type.application";
@@ -151,6 +158,9 @@
 				Base,
 			);
 			mainGroup = C26974472B7E2BF800E96B73;
+			packageReferences = (
+				1D2834A12C12D7AF00B20079 /* XCRemoteSwiftPackageReference "thinkresearch_messenger_ios_swift_sdk" */,
+			);
 			productRefGroup = C26974512B7E2BF900E96B73 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -167,6 +177,7 @@
 			files = (
 				C26974602B7E2BFB00E96B73 /* LaunchScreen.storyboard in Resources */,
 				C269745D2B7E2BFB00E96B73 /* Assets.xcassets in Resources */,
+				1D2834A52C12DB6600B20079 /* PrivacyInfo.xcprivacy in Resources */,
 				C269745B2B7E2BF900E96B73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,23 +205,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E39E7EF560754E09C152AB8B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NativeSdkTest/Pods-NativeSdkTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NativeSdkTest/Pods-NativeSdkTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NativeSdkTest/Pods-NativeSdkTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -452,6 +446,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1D2834A12C12D7AF00B20079 /* XCRemoteSwiftPackageReference "thinkresearch_messenger_ios_swift_sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PatientOrderSets/thinkresearch_messenger_ios_swift_sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1D2834A22C12D7AF00B20079 /* thinkresearch_messenger_ios_swift_sdk */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D2834A12C12D7AF00B20079 /* XCRemoteSwiftPackageReference "thinkresearch_messenger_ios_swift_sdk" */;
+			productName = thinkresearch_messenger_ios_swift_sdk;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C26974482B7E2BF800E96B73 /* Project object */;
 }

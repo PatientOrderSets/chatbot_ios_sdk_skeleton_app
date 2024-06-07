@@ -1,0 +1,15 @@
+{
+  "originHash" : "1e1cb04065ed4b734946e0bed5b38d64c780ab832f53b7f8d6cf17b13b0117fc",
+  "pins" : [
+    {
+      "identity" : "thinkresearch_messenger_ios_swift_sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/PatientOrderSets/thinkresearch_messenger_ios_swift_sdk.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "9d609ce1d541798981c4df24bedec5894dd48a6c"
+      }
+    }
+  ],
+  "version" : 3
+}

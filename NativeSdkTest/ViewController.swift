@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import Think_research_messenger_SDK_Release
- 
+import thinkresearch_messenger_ios_swift_sdk
+
 
 
 
@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var configuration = ChatBotConfiguration(
         appId: "yB9BJmrcH3bM4CShtMKB5qrw",
         baseUrl: "test.ca.digital-front-door.stg.gcp.trchq.com",
+        originURL:  "test.ca.digital-front-door.stg.gcp.trchq.com",
         lang:"en"
     )
     
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
     //    )
     
     
-    var chatBotSdk:ChatBotSdk?
+    var chatBotSdk:TRC_Chatbot_SDK?
     var language = "en"
     var appIID = "yB9BJmrcH3bM4CShtMKB5qrw"
     var originValue = "test.ca.digital-front-door.stg.gcp.trchq.com"
@@ -50,11 +51,12 @@ class ViewController: UIViewController {
         configuration = ChatBotConfiguration(
             appId: defConfig!.appID,
             baseUrl: defConfig!.baseURL,
+            originURL:  defConfig!.origin,
             lang:defConfig!.language
         )
         
         
-        chatBotSdk = ChatBotSdk(configuration: configuration, viewController: self);
+        chatBotSdk = TRC_Chatbot_SDK(configuration: configuration, viewController: self);
         chatBotSdk?.openBot()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             sender.isUserInteractionEnabled = true
@@ -83,7 +85,8 @@ class ViewController: UIViewController {
                 
                 self.configuration = ChatBotConfiguration(
                     appId: appId,
-                    baseUrl: baseUrl,
+                    baseUrl: baseUrl, 
+                    originURL: originValue  ,
                     lang:language
                 )
                 

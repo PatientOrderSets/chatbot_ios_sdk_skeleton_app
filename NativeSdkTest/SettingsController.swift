@@ -183,11 +183,11 @@ extension SettingsController :UIPickerViewDataSource,UIPickerViewDelegate,UIText
                 
                 
                 
-                appIDTextField.text = "XnA6d2mEejaov78UETAzM5uj"
+                appIDTextField.text = "WQN5X4nbUdgmf66jFMV8U2UL"
                 appIDTextField.isUserInteractionEnabled = false
-                originTextField.text = "app-digitalfrontdoor-dev.apps.ext.novascotia.ca"
+                originTextField.text = "test.ca.digital-front-door.sbx.gcp.trchq.com"
                 originTextField.isUserInteractionEnabled = false
-                baseUrlTextField.text = "test.ca.one-stop-talk.sbx.gcp.trchq.com"
+                baseUrlTextField.text = "test.ca.digital-front-door.sbx.gcp.trchq.com"
                 baseUrlTextField.isUserInteractionEnabled = false
                 languageTextField.text = languagePickerValues[0]
                 
