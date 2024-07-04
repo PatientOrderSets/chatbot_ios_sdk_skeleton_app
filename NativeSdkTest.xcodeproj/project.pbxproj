@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D2834A52C12DB6600B20079 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 1D2834A42C12DB6600B20079 /* PrivacyInfo.xcprivacy */; };
-		1D5A89242C235116005BC2A9 /* thinkresearch_messenger_ios_swift_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1D5A89232C235116005BC2A9 /* thinkresearch_messenger_ios_swift_sdk */; };
+		1D2A67172C36FC8D008C537C /* thinkresearch_messenger_ios_swift_sdk in Frameworks */ = {isa = PBXBuildFile; productRef = 1D2A67162C36FC8D008C537C /* thinkresearch_messenger_ios_swift_sdk */; };
 		1D97543C2BC7AB1F009464EB /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D97543B2BC7AB1F009464EB /* SettingsController.swift */; };
 		1DA47BA62BC98A7B0018A8E3 /* DBWraper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47BA52BC98A7B0018A8E3 /* DBWraper.swift */; };
 		1DA47BA82BC998A20018A8E3 /* ConfigurationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DA47BA72BC998A20018A8E3 /* ConfigurationCell.swift */; };
@@ -48,7 +48,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB3087395D90752D5E7CE28 /* Pods_NativeSdkTest.framework in Frameworks */,
-				1D5A89242C235116005BC2A9 /* thinkresearch_messenger_ios_swift_sdk in Frameworks */,
+				1D2A67172C36FC8D008C537C /* thinkresearch_messenger_ios_swift_sdk in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +128,7 @@
 			);
 			name = NativeSdkTest;
 			packageProductDependencies = (
-				1D5A89232C235116005BC2A9 /* thinkresearch_messenger_ios_swift_sdk */,
+				1D2A67162C36FC8D008C537C /* thinkresearch_messenger_ios_swift_sdk */,
 			);
 			productName = NativeSdkTest;
 			productReference = C26974502B7E2BF900E96B73 /* NativeSdkTest.app */;
@@ -159,7 +159,7 @@
 			);
 			mainGroup = C26974472B7E2BF800E96B73;
 			packageReferences = (
-				1D5A89222C235116005BC2A9 /* XCRemoteSwiftPackageReference "thinkresearch_messenger_ios_swift_sdk" */,
+				1D2A67152C36FC8D008C537C /* XCRemoteSwiftPackageReference "thinkresearch_messenger_ios_swift_sdk" */,
 			);
 			productRefGroup = C26974512B7E2BF900E96B73 /* Products */;
 			projectDirPath = "";
@@ -452,7 +452,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1D5A89222C235116005BC2A9 /* XCRemoteSwiftPackageReference "thinkresearch_messenger_ios_swift_sdk" */ = {
+		1D2A67152C36FC8D008C537C /* XCRemoteSwiftPackageReference "thinkresearch_messenger_ios_swift_sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/PatientOrderSets/thinkresearch_messenger_ios_swift_sdk.git";
 			requirement = {
@@ -463,9 +463,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1D5A89232C235116005BC2A9 /* thinkresearch_messenger_ios_swift_sdk */ = {
+		1D2A67162C36FC8D008C537C /* thinkresearch_messenger_ios_swift_sdk */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1D5A89222C235116005BC2A9 /* XCRemoteSwiftPackageReference "thinkresearch_messenger_ios_swift_sdk" */;
+			package = 1D2A67152C36FC8D008C537C /* XCRemoteSwiftPackageReference "thinkresearch_messenger_ios_swift_sdk" */;
 			productName = thinkresearch_messenger_ios_swift_sdk;
 		};
 /* End XCSwiftPackageProductDependency section */
