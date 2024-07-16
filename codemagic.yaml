@@ -37,6 +37,17 @@ workflows:
           xcode-project build-ipa \
             --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
             --scheme "$XCODE_SCHEME"
+      - name: Upload ipa to BrowserStack
+        script: |
+          response=$(curl -u "balajiabiraman_dhEuiL:f8xXkagrkJzDBMDi1bJQ" \
+          -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
+          -F "file=@./build/ios/ipa/NativeSdkTest.ipa" \
+          -F "custom_id=trc-skeleton-app-ios") 
+      - name: Install BrowserStack SDK and Run Tests
+        script: |
+          cd ./appium_tests/ios
+          pip install browserstack-sdk
+          browserstack-sdk pytest pytest_main.py
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log

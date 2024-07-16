@@ -1,0 +1,23 @@
+userName: balajiabiraman_dhEuiL
+accessKey: f8xXkagrkJzDBMDi1bJQ
+framework: python
+app: trc-skeleton-app-ios
+platforms:
+  # - platformName: ios
+  #   deviceName: iPhone 15 Pro
+  #   platformVersion: 17.4
+  - platformName: ios
+    deviceName: iPhone 13
+    platformVersion: 17.2
+  - platformName: ios
+    deviceName: iPhone 12
+    platformVersion: 14.0
+  - platformName: ios
+    deviceName: iPhone 15
+    platformVersion: 17.4
+browserstackLocal: false
+buildName: trc-skeleton-app-ios
+projectName: TRC Skeleton iOS
+buildIdentifier: ${BUILD_NUMBER}
+debug: true
+networkLogs: true
