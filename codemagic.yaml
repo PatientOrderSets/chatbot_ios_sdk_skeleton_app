@@ -69,7 +69,7 @@ workflows:
           # - mnaseem@architech.ca
           # - jtenneti@architech.ca
           # - babiraman@architech.ca
-          # - emacius@architech.ca
+          - emacius@architech.ca
         notify:
           success: true
           failure: true
