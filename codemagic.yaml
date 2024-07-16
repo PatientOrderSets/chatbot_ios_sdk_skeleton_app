@@ -10,6 +10,7 @@ workflows:
     environment:
       groups:
         - app_store_credentials
+        - browserstack_credentials
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.thinkresearch.app
