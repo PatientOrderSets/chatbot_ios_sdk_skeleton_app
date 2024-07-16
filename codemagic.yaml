@@ -38,6 +38,14 @@ workflows:
           xcode-project build-ipa \
             --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
             --scheme "$XCODE_SCHEME"
+      - name: Prepare BrowserStack Config
+        script: |
+          sed -i '' -e "s/\${userName}/${userName}/g" appium_tests/ios/browserstack.yml
+          sed -i '' -e "s/\${accessKey}/${accessKey}/g" appium_tests/ios/browserstack.yml
+      - name: Prepare pytest app config
+        script: |
+          sed -i '' -e "s/\${apiKey}/${app_api_key}/g" appium_tests/ios/pytest_main.yml
+          sed -i '' -e "s/\${serverURL}/${app_server_url}/g" appium_tests/ios/pytest_main.yml
       - name: Upload ipa to BrowserStack
         script: |
           response=$(curl -u "${userName}:${accessKey}" \
