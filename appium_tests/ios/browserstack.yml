@@ -1,17 +1,8 @@
-userName: balajiabiraman_dhEuiL
-accessKey: f8xXkagrkJzDBMDi1bJQ
+userName: ${userName}
+accessKey: ${accessKey}
 framework: python
-app: trc-skeleton-app-ios
+app: trc-app-ios
 platforms:
-  # - platformName: ios
-  #   deviceName: iPhone 15 Pro
-  #   platformVersion: 17.4
-  - platformName: ios
-    deviceName: iPhone 13
-    platformVersion: 17.2
-  - platformName: ios
-    deviceName: iPhone 12
-    platformVersion: 14.0
   - platformName: ios
     deviceName: iPhone 15
     platformVersion: 17.4
