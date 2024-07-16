@@ -1,13 +1,13 @@
 userName: ${userName}
 accessKey: ${accessKey}
 framework: python
-app: trc-app-ios
+app: trc-skeleton-app-ios
 platforms:
   - platformName: ios
     deviceName: iPhone 15
     platformVersion: 17.4
 browserstackLocal: false
-buildName: trc-skeleton-app-ios
+buildName: trc-app-ios
 projectName: TRC Skeleton iOS
 buildIdentifier: ${BUILD_NUMBER}
 debug: true
