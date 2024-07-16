@@ -44,8 +44,8 @@ workflows:
           sed -i '' -e "s/\${accessKey}/${accessKey}/g" appium_tests/ios/browserstack.yml
       - name: Prepare pytest app config
         script: |
-          sed -i '' -e "s/\${apiKey}/${app_api_key}/g" appium_tests/ios/pytest_main.yml
-          sed -i '' -e "s/\${serverURL}/${app_server_url}/g" appium_tests/ios/pytest_main.yml
+          sed -i '' -e "s/\${apiKey}/${app_api_key}/g" appium_tests/ios/pytest_main.py
+          sed -i '' -e "s/\${serverURL}/${app_server_url}/g" appium_tests/ios/pytest_main.py
       - name: Upload ipa to BrowserStack
         script: |
           response=$(curl -u "${userName}:${accessKey}" \
@@ -65,11 +65,11 @@ workflows:
     publishing:
       email:
         recipients:
-          - sts@architech.ca
-          - mnaseem@architech.ca
-          - jtenneti@architech.ca
-          - babiraman@architech.ca
-          - emacius@architech.ca
+          # - sts@architech.ca
+          # - mnaseem@architech.ca
+          # - jtenneti@architech.ca
+          # - babiraman@architech.ca
+          # - emacius@architech.ca
         notify:
           success: true
           failure: true
