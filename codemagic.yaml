@@ -65,10 +65,10 @@ workflows:
     publishing:
       email:
         recipients:
-          # - sts@architech.ca
-          # - mnaseem@architech.ca
-          # - jtenneti@architech.ca
-          # - babiraman@architech.ca
+          - sts@architech.ca
+          - mnaseem@architech.ca
+          - jtenneti@architech.ca
+          - babiraman@architech.ca
           - emacius@architech.ca
         notify:
           success: true
